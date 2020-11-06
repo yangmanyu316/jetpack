@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <item-->
+<!--        android:id="@+id/secondFragment"-->
+<!--        android:icon="@drawable/abc_vector_test"-->
+<!--        android:title="@string/second_fragment" />-->
+
+    <item android:id="@+id/secondFragment"
+        android:title="这是下一步的菜单展示效果"
+        android:tooltipText="下一步"
+        android:titleCondensed="下一步"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+</menu>

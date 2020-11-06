@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainFragment"
+    android:id="@+id/nav_live_data">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.kotlin.kt.livedata.frgment.FirstFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_share_first">
+
+        <action
+            android:id="@+id/action_first_to_second"
+            app:destination="@id/second_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/second_fragment"
+        android:name="com.kotlin.kt.livedata.frgment.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_share_second"
+        >
+    </fragment>
+
+</navigation>
