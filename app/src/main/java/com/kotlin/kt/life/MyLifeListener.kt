@@ -12,7 +12,7 @@ import androidx.lifecycle.OnLifecycleEvent
  * @Author: yangmanyu
  * @Date: 2020/10/15 15:45
  */
-class MyLifeListener(context: Activity?, listener: onChangeListener?) : LifecycleObserver {
+class MyLifeListener(context: Activity?, listener: OnChangeListener?) : LifecycleObserver {
     private fun init() {
         Log.e("lifecycle =>", "do Init")
     }
@@ -27,7 +27,7 @@ class MyLifeListener(context: Activity?, listener: onChangeListener?) : Lifecycl
         Log.e("lifecycle=>", "destroy")
     }
 
-    interface onChangeListener {
+    interface OnChangeListener {
         fun onChanged(params: String?)
     }
 

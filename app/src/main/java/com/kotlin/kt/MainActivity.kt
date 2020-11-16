@@ -16,6 +16,7 @@ import com.kotlin.kt.life.LifeActivity
 import com.kotlin.kt.livedata.TimerWithLiveDataActivity
 import com.kotlin.kt.livedata.frgment.ShareDataWithLiveDataActivity
 import com.kotlin.kt.navigation.NavigationActivity
+import com.kotlin.kt.room.RoomActivity
 import com.kotlin.kt.viewmodel.ViewModelActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -59,12 +60,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Log.e("versionName", BuildConfig.VERSION_NAME)
         button.setOnClickListener(this)
         button1.setOnClickListener(this)
-        button4.setOnClickListener(this)
-        button5.setOnClickListener(this)
-        button9.setOnClickListener(this)
-        button10.setOnClickListener(this)
         button2.setOnClickListener(this)
         button3.setOnClickListener(this)
+        button4.setOnClickListener(this)
+        button5.setOnClickListener(this)
+        button6.setOnClickListener (this)
+        button9.setOnClickListener(this)
+        button10.setOnClickListener(this)
     }
 
     private fun getChar() {
@@ -100,6 +102,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button5 -> {
                 intent.setClass(this, NavigationActivity::class.java)
+            }
+            R.id.button6->{
+                intent.setClass(this, RoomActivity::class.java)
             }
             R.id.button9 -> {
                 intent.setClass(this, ControllFlowChapter::class.java)

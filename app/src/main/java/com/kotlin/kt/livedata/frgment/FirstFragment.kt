@@ -34,7 +34,7 @@ class FirstFragment : Fragment() {
 
         val shareModel = activity?.let { ViewModelProvider(it).get(ShareDataViewModel::class.java) }
 
-        liveData = shareModel!!.getProgress() as MutableLiveData<String>
+        liveData = shareModel!!.getProgress()
 
         Log.e("first fragment =>", "live data is${liveData}")
 
@@ -53,11 +53,9 @@ class FirstFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                Log.e("text changed=>", s.toString())
                 liveData!!.postValue(s.toString())
             }
         })
-
 
         btn_first_fragment.setOnClickListener { v ->
             v.findNavController().navigate(R.id.action_first_to_second)

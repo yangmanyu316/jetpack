@@ -7,7 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlin.kt.R
-import com.kotlin.kt.life.MyLifeListener.onChangeListener
+import com.kotlin.kt.life.MyLifeListener.OnChangeListener
 import kotlinx.android.synthetic.main.activity_start.*
 
 /**
@@ -30,7 +30,7 @@ class LifeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_start)
-        myLifeListener = MyLifeListener(this, object : onChangeListener {
+        myLifeListener = MyLifeListener(this, object : OnChangeListener {
             override fun onChanged(params: String?) {
             }
         })

@@ -7,4 +7,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="second_fragment">SecondFragment</string>
+    <string name="time_live_data">Time:</string>
+    <string name="room_list_name">room name: %1$s</string>
+    <string name="room_list_age">room age: %1$s</string>
 </resources>

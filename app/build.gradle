@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -49,6 +50,7 @@ android {
     }
     packagingOptions {
         exclude 'META-INF/proguard/coroutines.pro'
+        exclude 'META-INF/atomicfu.kotlin_module'
     }
 
     compileOptions {
@@ -94,6 +96,10 @@ dependencies {
     apply plugin: "androidx.navigation.safeargs.kotlin"
     //view model
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$view_model_version"
+    //orm
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
 }
 repositories {

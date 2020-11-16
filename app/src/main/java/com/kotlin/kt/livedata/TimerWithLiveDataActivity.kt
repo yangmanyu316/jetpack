@@ -33,8 +33,9 @@ class TimerWithLiveDataActivity : AppCompatActivity() {
         val liveData = timerWithLiveDataViewModel.getCurrentSecond() as MutableLiveData<Int>
 
         //通过LiveData.observe()实现对ViewModel中数据变化的观察
-        liveData.observe(this, Observer { second -> //更新UI界面
-            tv_live_data.text = "TIME:$second"
+        liveData.observe(this, Observer { second ->
+            //更新UI界面
+            tv_live_data.text = getString(R.string.time_live_data).plus(second)
         })
 
         //与liveData.observe相似，没有绑定owner，在页面任何状态都能接收到通知，需手动调用removeObserver()停止，否则Activity回收，造成内存泄露

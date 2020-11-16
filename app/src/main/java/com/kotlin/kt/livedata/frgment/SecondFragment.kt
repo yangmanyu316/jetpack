@@ -31,11 +31,15 @@ class SecondFragment : Fragment() {
         val model = activity?.let { ViewModelProvider(it).get(ShareDataViewModel::class.java) }
         val data = model!!.getProgress()
 
+
+        //let fun calls the specified function [block] with `this` value as its argument and returns its result.
         activity?.let {
             data.observe(it, Observer { data ->
-            tv_second_fragment.text = data
-        })
+                //maybe kotlin null point exception
+                tv_second_fragment?.let {
+                    tv_second_fragment!!.text = data
+                }
+            })
         }
-
     }
 }

@@ -38,7 +38,7 @@ class TimerWithLiveDataViewModel : ViewModel() {
                     currentSecond!!.postValue(currentSecond!!.value!! + 1)
                 }
             }
-            timer!!.schedule(timerTask, 1000, 1000) //延迟3秒执行
+            timer!!.schedule(timerTask, 1000, 1000)
         }
     }
 
