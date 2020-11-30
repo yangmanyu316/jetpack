@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="networkImage"
+            type="String" />
+
+        <variable
+            name="localImage"
+            type="int" />
+
+        <variable
+            name="imagePadding"
+            type="int" />
+
+        <variable
+            name="ClickHandler"
+            type="com.kotlin.kt.databinding.bindingadapter.BindAdapterActivity.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_binding_adapter"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:defaultImageResource="@{localImage}"
+            android:padding="@{imagePadding}"
+            app:image="@{networkImage}" />
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@+id/iv_binding_adapter"
+            android:onClick="@{ClickHandler.onClick}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

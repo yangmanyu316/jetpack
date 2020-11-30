@@ -13,8 +13,8 @@ import androidx.lifecycle.LiveData
 
 class StudentViewModel(application: Application) : AndroidViewModel(application) {
     private val myDatabase: MyDataBase = MyDataBase.getInstance(application)!!
-    private val liveDataStudent: LiveData<List<Student>>
-    fun getLiveDataStudent(): LiveData<List<Student>> {
+    private val liveDataStudent: LiveData<MutableList<Student>>
+    fun getLiveDataStudent(): LiveData<MutableList<Student>> {
         return liveDataStudent
     }
     init {

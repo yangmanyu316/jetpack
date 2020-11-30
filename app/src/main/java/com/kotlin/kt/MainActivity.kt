@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.kotlin.kt.bean.Artist
+import com.kotlin.kt.databinding.DataBindingActivity
 import com.kotlin.kt.net.Request
 import com.kotlin.kt.number.ArrayAndStringChapter
 import com.kotlin.kt.number.ControllFlowChapter
@@ -18,6 +19,7 @@ import com.kotlin.kt.livedata.frgment.ShareDataWithLiveDataActivity
 import com.kotlin.kt.navigation.NavigationActivity
 import com.kotlin.kt.room.RoomActivity
 import com.kotlin.kt.viewmodel.ViewModelActivity
+import com.kotlin.kt.workmanager.WorkManagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -64,7 +66,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button3.setOnClickListener(this)
         button4.setOnClickListener(this)
         button5.setOnClickListener(this)
-        button6.setOnClickListener (this)
+        button6.setOnClickListener(this)
+        button7.setOnClickListener(this)
+        button8.setOnClickListener(this)
         button9.setOnClickListener(this)
         button10.setOnClickListener(this)
     }
@@ -88,13 +92,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button -> {
                 intent.setClass(this, NumberChapter::class.java)
             }
-            R.id.button1->{
+            R.id.button1 -> {
                 intent.setClass(this, ViewModelActivity::class.java)
             }
-            R.id.button2->{
+            R.id.button2 -> {
                 intent.setClass(this, TimerWithLiveDataActivity::class.java)
             }
-            R.id.button3->{
+            R.id.button3 -> {
                 intent.setClass(this, ShareDataWithLiveDataActivity::class.java)
             }
             R.id.button4 -> {
@@ -103,8 +107,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button5 -> {
                 intent.setClass(this, NavigationActivity::class.java)
             }
-            R.id.button6->{
+            R.id.button6 -> {
                 intent.setClass(this, RoomActivity::class.java)
+            }
+            R.id.button7 -> {
+                intent.setClass(this, WorkManagerActivity::class.java)
+            }
+            R.id.button8->{
+                intent.setClass(this, DataBindingActivity::class.java)
             }
             R.id.button9 -> {
                 intent.setClass(this, ControllFlowChapter::class.java)

@@ -10,4 +10,6 @@
     <string name="time_live_data">Time:</string>
     <string name="room_list_name">room name: %1$s</string>
     <string name="room_list_age">room age: %1$s</string>
+    <string name="work_manager">work manager</string>
+    <string name="data_binding">data binding</string>
 </resources>

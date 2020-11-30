@@ -64,6 +64,22 @@
             android:name=".room.RoomActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".workmanager.WorkManagerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".databinding.DataBindingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".databinding.include.DataBindingIncludeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".databinding.bindingadapter.BindAdapterActivity"
+            android:screenOrientation="portrait" />
+
         <service android:name=".life.LifeService" />
     </application>
 

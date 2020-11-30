@@ -21,7 +21,7 @@ interface StudentDao {
     fun updateStudent(student: Student)
 
     @Query("SELECT * FROM student")
-    fun getStudentList(): LiveData<List<Student>>
+    fun getStudentList(): LiveData<MutableList<Student>>
 
     @Query("SELECT * FROM student where id= :id")
     fun getStudentById(id: Int): Student

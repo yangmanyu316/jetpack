@@ -42,10 +42,11 @@ class RoomActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        QueryStudentTask().execute()
         val studentViewModel : StudentViewModel = ViewModelProvider(this).get(StudentViewModel::class.java)
         studentViewModel.getLiveDataStudent().observe(this, Observer { t->
-
+            list.clear()
+            list.addAll(t)
+            adapter!!.notifyDataSetChanged()
         })
     }
 
@@ -97,25 +98,11 @@ class RoomActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    inner class QueryStudentTask : AsyncTask<Void?, Void?, Void?>() {
-        override fun onPostExecute(result: Void?) {
-            super.onPostExecute(result)
-            adapter!!.notifyDataSetChanged()
-        }
-
-        override fun doInBackground(vararg params: Void?): Void? {
-            list.clear()
-            list.addAll(myDataBase!!.studentDao()!!.getStudentList())
-            return null
-        }
-    }
 
     inner class InsertStudentTask(val name: String, private val age: String) : AsyncTask<Void?, Void?, Void?>() {
 
         override fun doInBackground(vararg params: Void?): Void? {
             myDataBase!!.studentDao()!!.insertStudent(Student(name, age))
-            list.clear()
-            list.addAll(myDataBase!!.studentDao()!!.getStudentList())
             return null
         }
 
@@ -129,8 +116,6 @@ class RoomActivity : AppCompatActivity() {
 
         override fun doInBackground(vararg params: Void?): Void? {
             myDataBase!!.studentDao()!!.updateStudent(student)
-            list.clear()
-            list.addAll(myDataBase!!.studentDao()!!.getStudentList())
             return null
         }
 
@@ -143,8 +128,6 @@ class RoomActivity : AppCompatActivity() {
     inner class DeleteStudentTask(private val student: Student) : AsyncTask<Void?, Void?, Void?>() {
         override fun doInBackground(vararg params: Void?): Void? {
             myDataBase!!.studentDao()!!.deleteStudent(student)
-            list.clear()
-            list.addAll(myDataBase!!.studentDao()!!.getStudentList())
             return null
         }
 

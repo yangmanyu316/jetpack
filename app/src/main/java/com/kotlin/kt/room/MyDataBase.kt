@@ -11,7 +11,7 @@ import androidx.room.RoomDatabase
  * @Author: yangmanyu
  * @Date: 2020/11/10 13:57
  */
-@Database(entities = [Student::class], version = 1)
+@Database(entities = [Student::class], version = 1, exportSchema = false)
 abstract class MyDataBase : RoomDatabase() {
 
     companion object {
