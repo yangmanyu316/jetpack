@@ -80,6 +80,9 @@
             android:name=".databinding.bindingadapter.BindAdapterActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".mvvm.MvvMActivity"
+            android:screenOrientation="portrait"/>
+
         <service android:name=".life.LifeService" />
     </application>
 

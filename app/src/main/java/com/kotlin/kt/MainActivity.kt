@@ -16,6 +16,7 @@ import com.kotlin.kt.number.NumberChapter
 import com.kotlin.kt.life.LifeActivity
 import com.kotlin.kt.livedata.TimerWithLiveDataActivity
 import com.kotlin.kt.livedata.frgment.ShareDataWithLiveDataActivity
+import com.kotlin.kt.mvvm.MvvMActivity
 import com.kotlin.kt.navigation.NavigationActivity
 import com.kotlin.kt.room.RoomActivity
 import com.kotlin.kt.viewmodel.ViewModelActivity
@@ -71,6 +72,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button8.setOnClickListener(this)
         button9.setOnClickListener(this)
         button10.setOnClickListener(this)
+        button11.setOnClickListener(this)
     }
 
     private fun getChar() {
@@ -121,6 +123,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button10 -> {
                 intent.setClass(this, LifeActivity::class.java)
+            }
+
+            R.id.button11->{
+                intent.setClass(this, MvvMActivity::class.java)
             }
         }
         startActivity(intent)

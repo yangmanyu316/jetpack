@@ -4,17 +4,20 @@
 
     <data>
 
-        <variable
-            name="networkImage"
-            type="String" />
+<!--        <variable-->
+<!--            name="networkImage"-->
+<!--            type="String" />-->
 
-        <variable
-            name="localImage"
-            type="int" />
+<!--        <variable-->
+<!--            name="localImage"-->
+<!--            type="int" />-->
 
+<!--        <variable-->
+<!--            name="imagePadding"-->
+<!--            type="int" />-->
         <variable
-            name="imagePadding"
-            type="int" />
+            name="imageEntity"
+            type="com.kotlin.kt.databinding.bean.ImageEntity" />
 
         <variable
             name="ClickHandler"
@@ -30,9 +33,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            app:defaultImageResource="@{localImage}"
-            android:padding="@{imagePadding}"
-            app:image="@{networkImage}" />
+            android:padding="@{imageEntity.imagePadding}" />
 
         <Button
             app:layout_constraintTop_toBottomOf="@+id/iv_binding_adapter"

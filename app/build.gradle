@@ -112,6 +112,11 @@ dependencies {
     implementation "androidx.work:work-runtime:$versions"
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+    //circel Image
+    implementation "de.hdodenhof:circleimageview:3.0.1"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 }
 repositories {
     mavenCentral()

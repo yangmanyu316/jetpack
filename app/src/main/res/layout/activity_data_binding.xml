@@ -85,8 +85,10 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/btn_image_adapter"
             app:layout_constraintTop_toBottomOf="@+id/btn_include"
             android:layout_marginTop="10dp"
+            android:text="image_adapter"
             android:onClick="@{EventHandle.onNavigation2BindingAdapter}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

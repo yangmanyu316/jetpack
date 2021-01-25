@@ -12,4 +12,11 @@
     <string name="room_list_age">room age: %1$s</string>
     <string name="work_manager">work manager</string>
     <string name="data_binding">data binding</string>
+
+
+    <string name="location">location: %s</string>
+
+    <string name="followers">followers: %s</string>
+
+    <string name="following">following: %s</string>
 </resources>
