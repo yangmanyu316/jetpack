@@ -18,7 +18,7 @@ import com.kotlin.kt.mvvm.repository.UserRepository
 class UserViewModel(application: Application) : AndroidViewModel(application) {
 
     private val user: LiveData<User>?
-    private val name = "yangmanyu316"
+    private val name = "MichaelYe"
     private val userRepository: UserRepository
 
     fun getUser(): LiveData<User>? {

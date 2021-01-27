@@ -39,13 +39,12 @@
                 android:orientation="vertical"
                 tools:context=".MainActivity">
 
-<!--                <de.hdodenhof.circleimageview.CircleImageView-->
-<!--                    android:id="@+id/profile_image"-->
-<!--                    android:layout_width="96dp"-->
-<!--                    android:layout_height="96dp"-->
-<!--                    app:image="@{user.avatar}"-->
-<!--                    app:civ_border_width="2dp"-->
-<!--                    app:civ_border_color="#cccccc" />-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#cccccc" />
 
                 <TextView
                     android:layout_width="wrap_content"

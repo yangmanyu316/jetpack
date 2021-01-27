@@ -33,6 +33,7 @@ class MvvMActivity: AppCompatActivity() {
         })
 
         val swipeRefresh: SwipeRefreshLayout = activityMainBinding.swipe
+        val image = activityMainBinding.profileImage
 
         swipeRefresh.setOnRefreshListener {
             userViewModel.refresh()
